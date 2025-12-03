@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+</head>
+
+<body>
+    <p>Some initial content visible by default.</p>
+
+    <div class="collapse" id="moreContent">
+      <p>This is the additional content that will be shown/hidden.</p>
+      <p>You can put any HTML elements here.</p>
+    </div>
+
+    <i class="" 
+        type="button" data-bs-toggle="collapse" 
+        data-bs-target="#moreContent" aria-expanded="false" 
+        aria-controls="moreContent">
+        <span postId="${post.Id}" class="moreText cmdIconXSmall fa fa-angle-double-down" title="Afficher la suite"></span>
+        </i>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+</body>
+
+</html>
