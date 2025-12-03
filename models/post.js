@@ -12,7 +12,8 @@ export default class Post extends Model {
         this.addField('Date', 'integer');
         this.setKey("Title");
 
-        /* Ajouter un champs Likes dynamiquement qui contiendra une jointure entre Posts et PostLikes */
+         /* Ajouter un champs Likes dynamiquement qui contiendra une jointure 
+            entre post.Id et UserModel via la table de jointure Postlikes */
         this.addJoint('Likes', PostLikeModel, UserModel, "Name");
 
         /* Ajouter un champ Owner qui contiendra les données Name et Avatar de l'usager créateur */
