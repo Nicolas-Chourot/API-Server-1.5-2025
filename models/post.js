@@ -16,10 +16,10 @@ export default class Post extends Model {
             entre post.Id et UserModel via la table de jointure Postlikes */
         this.addJoint('Likes', PostLikeModel, UserModel, "Name");
 
-        /* Ajouter un champ Owner qui contiendra les données Name et Avatar de l'usager créateur */
+        /* Ajouter un champ Owner qui contiendra les données Name et Avatar de l'usager créateur dont le id est post.OwnerId */
         this.addBind('OwnerId', UserModel, 'Name, Avatar');
 
-        /* Lors d'un retrait d'un Post effacer tous les PostLikes qui sont lui sont associés */
+        /* Lors d'un retrait d'un Post effacer tous les PostLikes qui lui sont associés */
         this.addDeleteCascades(PostLikeModel, "PostId");
        
     }
