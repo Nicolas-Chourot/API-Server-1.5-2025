@@ -203,7 +203,7 @@ export default class AccountsController extends Controller {
         // todo make sure that the requester has legitimity to delete ethier itself or its an admin
         if (AccessControl.writeGrantedAdminOrOwner(this.HttpContext.authorizations, this.requiredAuthorizations, id)) {
             this.repository.remove(id); // effacer user, ses posts, ses likes
-            this.HttpContext.accepted();
+            this.HttpContext.response.accepted();
         }
     }
 }
